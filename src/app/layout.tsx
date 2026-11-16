@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
-import { SmoothScroll } from "@/components/smooth-scroll";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import "./globals.css";
 
 const geistSans = Geist({

@@ -6,20 +6,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import { Container } from "@/components/layout/container";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { contact, telHref } from "@/content/site";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
-interface Props {
-  area: string;
-  phone: string;
-  tel: string;
-}
-
-export function Hero({ area, phone, tel }: Props) {
+export function Hero() {
   const root = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -49,35 +45,45 @@ export function Hero({ area, phone, tel }: Props) {
   return (
     <section ref={root} className="relative overflow-hidden">
       <DotPattern className="text-stone-300 [mask-image:radial-gradient(600px_circle_at_20%_30%,white,transparent)]" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 md:grid-cols-[1.1fr_1fr] md:py-28">
-        <div className="flex flex-col gap-7">
+      <Container className="relative grid items-center gap-10 py-12 sm:py-16 md:grid-cols-[1.2fr_1fr] md:gap-12 lg:py-28">
+        <div className="flex flex-col gap-6 sm:gap-7">
           <div data-hero-fade className="w-fit rounded-full border border-stone-200 bg-white/70 px-4 py-1.5 backdrop-blur">
-            <AnimatedShinyText className="text-xs font-medium uppercase tracking-widest">
-              Montage · {area}
+            <AnimatedShinyText className="text-xs font-medium tracking-widest uppercase">
+              Montage · {contact.area}
             </AnimatedShinyText>
           </div>
           <h1
             data-hero-title
-            className="font-heading text-5xl leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl"
+            className="font-heading text-[2.6rem] leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl md:text-5xl lg:text-7xl"
           >
-            Lüftungsgitter & Trockenbau, <span className="text-amber-600">sauber montiert.</span>
+            Lüftungsgitter & Trockenbau, <span className="text-brand">sauber montiert.</span>
           </h1>
-          <p data-hero-fade className="max-w-md text-lg text-stone-600">
+          <p data-hero-fade className="max-w-md text-base text-stone-600 sm:text-lg">
             Ihr Ansprechpartner für gesunde Raumluft und unsichtbare Zugänge. Direkt vom Fachmann, ohne Umwege.
           </p>
-          <div data-hero-fade className="flex flex-wrap items-center gap-3">
-            <ShimmerButton onClick={goToContact} background="oklch(0.216 0.006 56)" className="px-6 py-3 font-medium">
+          <div
+            data-hero-fade
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:flex-col md:items-start lg:flex-row lg:items-center"
+          >
+            <ShimmerButton
+              onClick={goToContact}
+              background="var(--foreground)"
+              className="min-h-12 w-full px-6 font-medium sm:w-auto"
+            >
               Kostenlos anfragen
             </ShimmerButton>
             <a
-              href={tel}
-              className="rounded-full border border-stone-300 px-6 py-3 font-medium transition-colors hover:border-stone-900"
+              href={telHref}
+              className="flex min-h-12 items-center justify-center rounded-full border border-stone-300 px-6 font-medium transition-colors hover:border-stone-900"
             >
-              {phone}
+              {contact.phone}
             </a>
           </div>
         </div>
-        <div data-hero-media className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-stone-200">
+        <div
+          data-hero-media
+          className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] bg-stone-200 md:max-w-none"
+        >
           <Image
             data-hero-img
             src="/lueftungsgitter.png"
@@ -87,9 +93,9 @@ export function Hero({ area, phone, tel }: Props) {
             sizes="(min-width: 768px) 45vw, 100vw"
             className="object-cover"
           />
-          <BorderBeam size={220} duration={10} colorFrom="#f59e0b" colorTo="#fde68a" borderWidth={2} />
+          <BorderBeam size={220} duration={10} colorFrom="var(--brand-bright)" colorTo="var(--brand-soft)" borderWidth={2} />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
