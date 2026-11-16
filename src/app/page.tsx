@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // ponytail: placeholder contact data, replace with real values
 const contact = {
   name: "Arsim Shala",
@@ -30,8 +32,15 @@ export default function Home() {
       <main className="flex-1 bg-neutral-100">
         <section className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid overflow-hidden bg-white shadow-md md:grid-cols-2">
-            <div className="flex min-h-64 items-center justify-center bg-gradient-to-br from-neutral-200 to-neutral-50">
-              <GrilleIcon className="h-32 w-32 text-neutral-400" />
+            <div className="relative min-h-80">
+              <Image
+                src="/lueftungsgitter.png"
+                alt="Monteur an der Decke und Lüftungsgitter"
+                fill
+                priority
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-col gap-4 p-8">
               <GrilleIcon className="h-10 w-10 text-neutral-700" />
