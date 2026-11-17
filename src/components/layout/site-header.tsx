@@ -9,7 +9,7 @@ export function SiteHeader() {
       <Container className="flex items-center gap-3 py-2 md:justify-between md:gap-6">
         <a href="#" className="font-heading mr-auto flex min-h-11 items-center gap-2 text-lg font-semibold md:mr-0">
           <HouseIcon className="text-brand h-6 w-6" />
-          {contact.name}
+          {contact.company}
         </a>
         <nav aria-label="Hauptnavigation" className="hidden text-sm text-stone-600 md:flex lg:gap-2">
           {nav.map((item) => (

@@ -1,5 +1,6 @@
 // ponytail: projects are placeholders until real photos arrive
 export const contact = {
+  company: "Shala Trockenbau",
   name: "Arsim Shala",
   phone: "+49 1577 8734724",
   email: "info@shalatrockenbau.com",

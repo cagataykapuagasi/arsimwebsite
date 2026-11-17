@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arsim Shala – Trockenbau, Bodenverlegung & Tapezieren in Jestetten",
-  description: "Trockenbau, Bodenverlegung und Tapezieren mit Raufaser in Jestetten und Umgebung. Jetzt bei Arsim Shala anfragen.",
+  title: "Shala Trockenbau – Trockenbau, Bodenverlegung & Tapezieren in Jestetten",
+  description: "Trockenbau, Bodenverlegung und Tapezieren mit Raufaser in Jestetten und Umgebung. Jetzt bei Shala Trockenbau anfragen.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
