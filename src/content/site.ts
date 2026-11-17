@@ -2,7 +2,7 @@
 export const contact = {
   name: "Arsim Shala",
   phone: "+49 1577 8734724",
-  email: "arsimshala@live.com",
+  email: "info@shalatrockenbau.com",
   address: "Dorfstraße 8, 79798 Jestetten",
   area: "Jestetten und Umgebung",
 };
