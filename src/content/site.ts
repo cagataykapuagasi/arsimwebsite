@@ -1,9 +1,10 @@
-// ponytail: placeholder content, replace contact data, services and projects with real values
+// ponytail: projects are placeholders until real photos arrive
 export const contact = {
   name: "Arsim Shala",
-  phone: "+49 000 0000000",
-  email: "info@example.de",
-  address: "Musterstraße 1, 00000 Musterstadt",
+  phone: "+49 1577 8734724",
+  email: "arsimshala@live.com",
+  address: "Dorfstraße 8, 79798 Jestetten",
+  area: "Jestetten und Umgebung",
 };
 
 export const telHref = `tel:${contact.phone.replace(/\s/g, "")}`;
@@ -26,31 +27,38 @@ export interface TextItem {
   text: string;
 }
 
-export const services: TextItem[] = [
-  {
-    title: "Lüftungsgitter",
-    text: "Montage von Lüftungsgittern gegen Schimmel und für gute Luftzirkulation. In vielen Farben und Variationen.",
-  },
-  {
-    title: "Revisionsklappen",
-    text: "Unsichtbarer, nachträglicher Zugang zu Installationen in Wand und Decke.",
-  },
+export interface Service extends TextItem {
+  icon: "drywall" | "floor" | "wallpaper";
+}
+
+export const services: Service[] = [
   {
     title: "Trockenbau",
-    text: "Wände, Decken und Verkleidungen sauber und termingerecht ausgeführt.",
+    text: "Wände, Decken und Verkleidungen aus Gipskarton, sauber und termingerecht ausgeführt.",
+    icon: "drywall",
+  },
+  {
+    title: "Bodenverlegung",
+    text: "Neue Böden fachgerecht verlegt, vom vorbereiteten Untergrund bis zur Sockelleiste.",
+    icon: "floor",
+  },
+  {
+    title: "Tapezieren mit Raufaser",
+    text: "Raufasertapete faltenfrei tapeziert, die ideale Grundlage für einen frischen Anstrich.",
+    icon: "wallpaper",
   },
 ];
 
 export const keywords = [
-  "Lüftungsgitter",
-  "Revisionsklappen",
   "Trockenbau",
-  "Deckenmontage",
+  "Bodenverlegung",
+  "Raufasertapete",
   "Saubere Ausführung",
   "Termintreue",
+  "Jestetten und Umgebung",
 ];
 
-export const projects = ["Bad, Musterstadt", "Büro, Musterstadt", "Wohnung, Musterstadt"];
+export const projects = ["Trockenbau", "Bodenverlegung", "Tapezieren mit Raufaser"];
 
 export const steps: TextItem[] = [
   { title: "Anfrage", text: "Sie rufen an oder schreiben eine E-Mail mit Ihrem Vorhaben." },

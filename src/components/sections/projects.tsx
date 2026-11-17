@@ -1,4 +1,4 @@
-import { GrilleIcon } from "@/components/icons/grille-icon";
+import { HouseIcon } from "@/components/icons";
 import { Container } from "@/components/layout/container";
 import { SectionHead } from "@/components/sections/section-head";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -8,7 +8,7 @@ function ProjectCard({ caption }: { caption: string }) {
   return (
     <figure className="group flex flex-col gap-3">
       <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-stone-200 transition-transform duration-500 group-hover:scale-[0.98]">
-        <GrilleIcon className="h-12 w-12 text-stone-400 transition-transform duration-500 group-hover:scale-110" />
+        <HouseIcon className="h-12 w-12 text-stone-400 transition-transform duration-500 group-hover:scale-110" />
       </div>
       <figcaption className="text-sm text-stone-600">{caption}</figcaption>
     </figure>

@@ -56,10 +56,10 @@ export function Hero() {
             data-hero-title
             className="font-heading text-[2.6rem] leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl md:text-5xl lg:text-7xl"
           >
-            Lüftungsgitter & Trockenbau, <span className="text-brand">sauber montiert.</span>
+            Trockenbau, Böden & Tapeten. <span className="text-brand">Sauber gemacht.</span>
           </h1>
           <p data-hero-fade className="max-w-md text-base text-stone-600 sm:text-lg">
-            Ihr Ansprechpartner für gesunde Raumluft und unsichtbare Zugänge. Direkt vom Fachmann, ohne Umwege.
+            Ihr Handwerker in {contact.area} für Trockenbau, Bodenverlegung und Raufasertapete. Direkt vom Fachmann, ohne Umwege.
           </p>
           <div
             data-hero-fade
@@ -87,7 +87,7 @@ export function Hero() {
           <Image
             data-hero-img
             src="/lueftungsgitter.png"
-            alt="Monteur an der Decke und Lüftungsgitter"
+            alt="Handwerker bei Trockenbauarbeiten an der Decke"
             fill
             priority
             sizes="(min-width: 768px) 45vw, 100vw"

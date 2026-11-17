@@ -1,11 +1,14 @@
-import { GrilleIcon } from "@/components/icons/grille-icon";
+import { DrywallIcon, FloorIcon, WallpaperIcon } from "@/components/icons";
 import { Container } from "@/components/layout/container";
 import { SectionHead } from "@/components/sections/section-head";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { MagicCard } from "@/components/ui/magic-card";
-import { services, type TextItem } from "@/content/site";
+import { services, type Service } from "@/content/site";
 
-function ServiceCard({ title, text }: TextItem) {
+const serviceIcons = { drywall: DrywallIcon, floor: FloorIcon, wallpaper: WallpaperIcon };
+
+function ServiceCard({ title, text, icon }: Service) {
+  const Icon = serviceIcons[icon];
   return (
     <MagicCard
       className="h-full rounded-3xl"
@@ -15,7 +18,7 @@ function ServiceCard({ title, text }: TextItem) {
     >
       <div className="relative z-40 flex h-full flex-col gap-4 p-6 lg:p-8">
         <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50">
-          <GrilleIcon className="text-brand h-7 w-7" />
+          <Icon className="text-brand h-7 w-7" />
         </span>
         <h3 className="font-heading text-xl font-semibold">{title}</h3>
         <p className="text-sm leading-relaxed text-stone-600">{text}</p>
