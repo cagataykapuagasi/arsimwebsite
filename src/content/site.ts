@@ -4,7 +4,8 @@ export const contact = {
   name: "Arsim Shala",
   phone: "+49 1577 8734724",
   email: "info@shalatrockenbau.com",
-  address: "Dorfstraße 8, 79798 Jestetten",
+  street: "Dorfstraße 8",
+  city: "79798 Jestetten",
   area: "Jestetten und Umgebung",
 };
 
@@ -17,10 +18,10 @@ export interface NavItem {
 }
 
 export const nav: NavItem[] = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#referenzen", label: "Referenzen" },
-  { href: "#ablauf", label: "Ablauf" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#referenzen", label: "Referenzen" },
+  { href: "/#ablauf", label: "Ablauf" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export interface TextItem {

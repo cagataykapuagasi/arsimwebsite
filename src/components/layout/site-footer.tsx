@@ -1,11 +1,11 @@
 import { cacheLife } from "next/cache";
+import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { contact } from "@/content/site";
 
-// ponytail: Impressum/Datenschutz pages are legally required in Germany before launch
 const legalLinks = [
-  { href: "#", label: "Impressum" },
-  { href: "#", label: "Datenschutz" },
+  { href: "/impressum", label: "Impressum" },
+  { href: "/datenschutz", label: "Datenschutz" },
 ];
 
 async function CurrentYear() {
@@ -23,9 +23,9 @@ export function SiteFooter() {
         </span>
         <nav aria-label="Rechtliches" className="flex gap-2">
           {legalLinks.map((link) => (
-            <a key={link.label} href={link.href} className="flex min-h-11 items-center px-2 hover:text-stone-900">
+            <Link key={link.label} href={link.href} className="flex min-h-11 items-center px-2 hover:text-stone-900">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </Container>

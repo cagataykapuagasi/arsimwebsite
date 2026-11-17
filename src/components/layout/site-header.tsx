@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HouseIcon } from "@/components/icons";
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/layout/mobile-nav";
@@ -7,10 +8,10 @@ export function SiteHeader() {
   return (
     <header className="bg-background/75 sticky top-0 z-50 border-b border-stone-200/70 backdrop-blur-xl">
       <Container className="flex items-center gap-3 py-2 md:justify-between md:gap-6">
-        <a href="#" className="font-heading mr-auto flex min-h-11 items-center gap-2 text-lg font-semibold md:mr-0">
+        <Link href="/" className="font-heading mr-auto flex min-h-11 items-center gap-2 text-base font-semibold whitespace-nowrap sm:text-lg md:mr-0">
           <HouseIcon className="text-brand h-6 w-6" />
           {contact.company}
-        </a>
+        </Link>
         <nav aria-label="Hauptnavigation" className="hidden text-sm text-stone-600 md:flex lg:gap-2">
           {nav.map((item) => (
             <a

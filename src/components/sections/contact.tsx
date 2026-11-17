@@ -45,7 +45,9 @@ export function Contact() {
               <ContactRow label="E-Mail">
                 <ContactLink href={mailHref}>{contact.email}</ContactLink>
               </ContactRow>
-              <ContactRow label="Adresse">{contact.address}</ContactRow>
+              <ContactRow label="Adresse">
+                {contact.street}, {contact.city}
+              </ContactRow>
             </dl>
           </div>
         </BlurFade>
