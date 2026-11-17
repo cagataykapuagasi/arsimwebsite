@@ -4,7 +4,6 @@ export const contact = {
   phone: "+49 000 0000000",
   email: "info@example.de",
   address: "Musterstraße 1, 00000 Musterstadt",
-  area: "Musterstadt und Umgebung",
 };
 
 export const telHref = `tel:${contact.phone.replace(/\s/g, "")}`;

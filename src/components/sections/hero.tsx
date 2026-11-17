@@ -49,7 +49,7 @@ export function Hero() {
         <div className="flex flex-col gap-6 sm:gap-7">
           <div data-hero-fade className="w-fit rounded-full border border-stone-200 bg-white/70 px-4 py-1.5 backdrop-blur">
             <AnimatedShinyText className="text-xs font-medium tracking-widest uppercase">
-              Montage · {contact.area}
+              Wir machen Ihr Haus wieder fit
             </AnimatedShinyText>
           </div>
           <h1
