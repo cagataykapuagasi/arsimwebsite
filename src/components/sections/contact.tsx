@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import { SectionHead } from "@/components/sections/section-head";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { ShineBorder } from "@/components/ui/shine-border";
-import { contact, mailHref, telHref } from "@/content/site";
+import { contact, mailHref, telHref, whatsappHref } from "@/content/site";
 
 function ContactRow({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -14,9 +14,12 @@ function ContactRow({ label, children }: { label: string; children: ReactNode })
   );
 }
 
-function ContactLink({ href, children }: { href: string; children: ReactNode }) {
+function ContactLink({ href, children, external }: { href: string; children: ReactNode; external?: boolean }) {
   return (
-    <a href={href} className="text-brand-strong -my-3 inline-flex min-h-11 items-center py-3 hover:underline">
+    <a
+      href={href}
+      {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+      className="text-brand-strong -my-3 inline-flex min-h-11 items-center py-3 hover:underline">
       {children}
     </a>
   );
@@ -30,7 +33,7 @@ export function Contact() {
           <SectionHead eyebrow="Kontakt" title="Projekt besprechen?" />
           <BlurFade inView delay={0.1}>
             <p className="max-w-sm text-base text-stone-600 sm:text-lg">
-              Rufen Sie an oder schreiben Sie mir. Ich melde mich schnellstmöglich zurück.
+              Rufen Sie an oder schreiben Sie mir per WhatsApp oder E-Mail. Ich melde mich schnellstmöglich zurück.
             </p>
           </BlurFade>
         </div>
@@ -41,6 +44,11 @@ export function Contact() {
               <ContactRow label="Name">{contact.name}</ContactRow>
               <ContactRow label="Telefon">
                 <ContactLink href={telHref}>{contact.phone}</ContactLink>
+              </ContactRow>
+              <ContactRow label="WhatsApp">
+                <ContactLink href={whatsappHref} external>
+                  Nachricht schreiben
+                </ContactLink>
               </ContactRow>
               <ContactRow label="E-Mail">
                 <ContactLink href={mailHref}>{contact.email}</ContactLink>

@@ -1,11 +1,11 @@
-import { DrywallIcon, FloorIcon, WallpaperIcon } from "@/components/icons";
+import { DrywallIcon, FloorIcon, HouseIcon, WallpaperIcon } from "@/components/icons";
 import { Container } from "@/components/layout/container";
 import { SectionHead } from "@/components/sections/section-head";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { MagicCard } from "@/components/ui/magic-card";
 import { services, type Service } from "@/content/site";
 
-const serviceIcons = { drywall: DrywallIcon, floor: FloorIcon, wallpaper: WallpaperIcon };
+const serviceIcons = { drywall: DrywallIcon, floor: FloorIcon, wallpaper: WallpaperIcon, renovation: HouseIcon };
 
 function ServiceCard({ title, text, icon }: Service) {
   const Icon = serviceIcons[icon];
@@ -32,7 +32,7 @@ export function Services() {
     <section id="leistungen">
       <Container className="flex flex-col gap-10 py-16 md:gap-12 md:py-24">
         <SectionHead eyebrow="Leistungen" title="Was ich für Sie mache" />
-        <div className="grid gap-4 md:grid-cols-3 md:gap-5 lg:gap-6">
+        <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
           {services.map((service, i) => (
             <BlurFade key={service.title} inView delay={0.1 * i} className="h-full">
               <ServiceCard {...service} />

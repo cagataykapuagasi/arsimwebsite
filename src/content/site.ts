@@ -1,4 +1,3 @@
-// ponytail: projects are placeholders until real photos arrive
 export const contact = {
   company: "Shala Trockenbau",
   name: "Arsim Shala",
@@ -11,6 +10,7 @@ export const contact = {
 
 export const telHref = `tel:${contact.phone.replace(/\s/g, "")}`;
 export const mailHref = `mailto:${contact.email}`;
+export const whatsappHref = `https://wa.me/${contact.phone.replace(/\D/g, "")}`;
 
 export interface NavItem {
   href: string;
@@ -19,7 +19,6 @@ export interface NavItem {
 
 export const nav: NavItem[] = [
   { href: "/#leistungen", label: "Leistungen" },
-  { href: "/#referenzen", label: "Referenzen" },
   { href: "/#ablauf", label: "Ablauf" },
   { href: "/#kontakt", label: "Kontakt" },
 ];
@@ -30,7 +29,7 @@ export interface TextItem {
 }
 
 export interface Service extends TextItem {
-  icon: "drywall" | "floor" | "wallpaper";
+  icon: "drywall" | "floor" | "wallpaper" | "renovation";
 }
 
 export const services: Service[] = [
@@ -41,7 +40,7 @@ export const services: Service[] = [
   },
   {
     title: "Bodenverlegung",
-    text: "Neue Böden fachgerecht verlegt, vom vorbereiteten Untergrund bis zur Sockelleiste.",
+    text: "Laminat, Vinyl und weitere Beläge fachgerecht verlegt, vom vorbereiteten Untergrund bis zur Sockelleiste.",
     icon: "floor",
   },
   {
@@ -49,21 +48,25 @@ export const services: Service[] = [
     text: "Raufasertapete faltenfrei tapeziert, die ideale Grundlage für einen frischen Anstrich.",
     icon: "wallpaper",
   },
+  {
+    title: "Renovierung",
+    text: "Renovierung und Modernisierung von Innenräumen, alles aus einer Hand.",
+    icon: "renovation",
+  },
 ];
 
 export const keywords = [
   "Trockenbau",
   "Bodenverlegung",
   "Raufasertapete",
+  "Renovierung",
   "Saubere Ausführung",
   "Termintreue",
   "Jestetten und Umgebung",
 ];
 
-export const projects = ["Trockenbau", "Bodenverlegung", "Tapezieren mit Raufaser"];
-
 export const steps: TextItem[] = [
-  { title: "Anfrage", text: "Sie rufen an oder schreiben eine E-Mail mit Ihrem Vorhaben." },
+  { title: "Anfrage", text: "Sie rufen an oder schreiben per WhatsApp oder E-Mail." },
   { title: "Besichtigung & Angebot", text: "Wir schauen uns alles vor Ort an, Sie erhalten ein klares Angebot." },
   { title: "Ausführung", text: "Saubere Montage zum vereinbarten Termin." },
 ];

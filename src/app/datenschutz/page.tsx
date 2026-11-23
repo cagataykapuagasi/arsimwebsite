@@ -75,14 +75,30 @@ export default function DatenschutzPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. SSL-/TLS-Verschlüsselung">
+      <LegalSection title="5. Kontakt per WhatsApp">
+        <p>
+          Sie können uns über WhatsApp kontaktieren. Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal
+          Square, Grand Canal Harbour, Dublin 2, Irland. Erst wenn Sie den WhatsApp-Link anklicken und uns
+          schreiben, werden Daten an WhatsApp übertragen. Dabei verarbeitet WhatsApp Ihre Telefonnummer, Ihre
+          Nachrichten sowie Metadaten. Eine Übermittlung in die USA an die Meta Platforms, Inc. ist möglich;
+          sie erfolgt auf Grundlage des EU-U.S. Data Privacy Framework (Art. 45 DSGVO).
+        </p>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit einem Vertrag oder dessen
+          Anbahnung zusammenhängt, ansonsten Art. 6 Abs. 1 lit. f DSGVO. Wenn Sie WhatsApp nicht nutzen
+          möchten, erreichen Sie uns jederzeit per Telefon oder E-Mail. Weitere Informationen finden Sie in der
+          Datenschutzerklärung von WhatsApp.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="6. SSL-/TLS-Verschlüsselung">
         <p>
           Diese Website nutzt eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
           an „https://“ in der Adresszeile Ihres Browsers.
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Ihre Rechte">
+      <LegalSection title="7. Ihre Rechte">
         <p>Sie haben jederzeit das Recht auf:</p>
         <ul className="flex list-disc flex-col gap-1 pl-5">
           {rights.map((right) => (
