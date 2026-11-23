@@ -1,14 +1,11 @@
-import { DrywallIcon, FloorIcon, HouseIcon, WallpaperIcon } from "@/components/icons";
+import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { SectionHead } from "@/components/sections/section-head";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { MagicCard } from "@/components/ui/magic-card";
 import { services, type Service } from "@/content/site";
 
-const serviceIcons = { drywall: DrywallIcon, floor: FloorIcon, wallpaper: WallpaperIcon, renovation: HouseIcon };
-
-function ServiceCard({ title, text, icon }: Service) {
-  const Icon = serviceIcons[icon];
+function ServiceCard({ title, text, image, alt }: Service) {
   return (
     <MagicCard
       className="h-full rounded-3xl"
@@ -16,12 +13,20 @@ function ServiceCard({ title, text, icon }: Service) {
       gradientFrom="var(--brand-bright)"
       gradientTo="var(--brand-soft)"
     >
-      <div className="relative z-40 flex h-full flex-col gap-4 p-6 lg:p-8">
-        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft/50">
-          <Icon className="text-brand h-7 w-7" />
-        </span>
-        <h3 className="font-heading text-xl font-semibold">{title}</h3>
-        <p className="text-sm leading-relaxed text-stone-600">{text}</p>
+      <div className="relative z-40 flex h-full flex-col gap-4 p-4 pb-6 lg:pb-8">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-200">
+          <Image
+            src={image}
+            alt={alt}
+            fill
+            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-2 px-2">
+          <h3 className="font-heading text-xl font-semibold">{title}</h3>
+          <p className="text-sm leading-relaxed text-stone-600">{text}</p>
+        </div>
       </div>
     </MagicCard>
   );

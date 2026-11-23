@@ -29,29 +29,34 @@ export interface TextItem {
 }
 
 export interface Service extends TextItem {
-  icon: "drywall" | "floor" | "wallpaper" | "renovation";
+  image: string;
+  alt: string;
 }
 
 export const services: Service[] = [
   {
     title: "Trockenbau",
     text: "Wände, Decken und Verkleidungen aus Gipskarton, sauber und termingerecht ausgeführt.",
-    icon: "drywall",
+    image: "/services/trockenbau.jpg",
+    alt: "Gipskartonplatte wird an ein Metallständerwerk geschraubt",
   },
   {
     title: "Bodenverlegung",
     text: "Laminat, Vinyl und weitere Beläge fachgerecht verlegt, vom vorbereiteten Untergrund bis zur Sockelleiste.",
-    icon: "floor",
+    image: "/services/boden.jpg",
+    alt: "Handwerker verlegt Laminat in einem Wohnraum",
   },
   {
     title: "Tapezieren mit Raufaser",
     text: "Raufasertapete faltenfrei tapeziert, die ideale Grundlage für einen frischen Anstrich.",
-    icon: "wallpaper",
+    image: "/services/tapezieren.jpg",
+    alt: "Handwerker tapeziert eine Wand mit Raufaser",
   },
   {
     title: "Renovierung",
     text: "Renovierung und Modernisierung von Innenräumen, alles aus einer Hand.",
-    icon: "renovation",
+    image: "/services/renovierung.jpg",
+    alt: "Frisch renovierter, heller Wohnraum",
   },
 ];
 
