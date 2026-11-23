@@ -5,7 +5,7 @@ import { steps } from "@/content/site";
 
 export function Process() {
   return (
-    <section id="ablauf" className="bg-stone-900 text-stone-100">
+    <section id="ablauf" className="bg-brand-strong text-white">
       <Container className="flex flex-col gap-10 py-16 md:gap-14 md:py-24">
         <SectionHead onDark eyebrow="Ablauf" title="In drei Schritten zum Ergebnis" />
         <ProcessSteps steps={steps} />

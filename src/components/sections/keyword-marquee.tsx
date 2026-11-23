@@ -8,7 +8,7 @@ export function KeywordMarquee() {
         {keywords.map((keyword) => (
           <span key={keyword} className="font-heading flex items-center gap-12 text-xl font-medium text-stone-400 sm:text-2xl">
             {keyword}
-            <span aria-hidden className="text-brand-bright">
+            <span aria-hidden className="text-brand">
               ✦
             </span>
           </span>

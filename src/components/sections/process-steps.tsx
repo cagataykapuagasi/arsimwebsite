@@ -37,14 +37,14 @@ export function ProcessSteps({ steps }: Props) {
 
   return (
     <ol ref={root} className="relative grid gap-10 md:grid-cols-3">
-      <span data-step-line aria-hidden className="bg-brand-bright/60 absolute top-6 left-0 hidden h-px w-full md:block" />
+      <span data-step-line aria-hidden className="absolute bg-white/25 top-6 left-0 hidden h-px w-full md:block" />
       {steps.map((step, i) => (
         <li key={step.title} data-step className="relative flex flex-col gap-3">
-          <span className="font-heading bg-brand-bright flex h-12 w-12 items-center justify-center rounded-full font-semibold text-stone-900">
+          <span className="font-heading text-brand flex h-12 w-12 items-center justify-center rounded-full bg-white font-semibold">
             0{i + 1}
           </span>
           <h3 className="font-heading text-xl font-semibold">{step.title}</h3>
-          <p className="text-sm leading-relaxed text-stone-400">{step.text}</p>
+          <p className="text-sm leading-relaxed text-white/70">{step.text}</p>
         </li>
       ))}
     </ol>
