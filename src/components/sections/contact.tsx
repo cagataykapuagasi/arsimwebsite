@@ -33,7 +33,7 @@ export function Contact() {
           <SectionHead eyebrow="Kontakt" title="Projekt besprechen?" />
           <BlurFade inView delay={0.1}>
             <p className="max-w-sm text-base text-stone-600 sm:text-lg">
-              Rufen Sie an oder schreiben Sie mir per WhatsApp oder E-Mail. Ich melde mich schnellstmöglich zurück.
+              Rufen Sie uns an oder schreiben Sie uns per WhatsApp oder E-Mail. Wir melden uns schnellstmöglich zurück.
             </p>
           </BlurFade>
         </div>

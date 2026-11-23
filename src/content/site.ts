@@ -19,6 +19,7 @@ export interface NavItem {
 
 export const nav: NavItem[] = [
   { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#ueber-uns", label: "Über uns" },
   { href: "/#ablauf", label: "Ablauf" },
   { href: "/#kontakt", label: "Kontakt" },
 ];
@@ -36,7 +37,7 @@ export interface Service extends TextItem {
 export const services: Service[] = [
   {
     title: "Trockenbau",
-    text: "Wände, Decken und Verkleidungen aus Gipskarton, sauber und termingerecht ausgeführt.",
+    text: "Wände, Decken, Raumaufteilung und Innenausbau mit Gipskarton, sauber und termingerecht ausgeführt.",
     image: "/services/trockenbau.jpg",
     alt: "Gipskartonplatte wird an ein Metallständerwerk geschraubt",
   },
@@ -66,6 +67,7 @@ export const keywords = [
   "Raufasertapete",
   "Renovierung",
   "Saubere Ausführung",
+  "Faire Preise",
   "Termintreue",
   "Jestetten und Umgebung",
 ];

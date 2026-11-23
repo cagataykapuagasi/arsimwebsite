@@ -36,7 +36,7 @@ export function Services() {
   return (
     <section id="leistungen">
       <Container className="flex flex-col gap-10 py-16 md:gap-12 md:py-24">
-        <SectionHead eyebrow="Leistungen" title="Was ich für Sie mache" />
+        <SectionHead eyebrow="Leistungen" title="Was wir für Sie tun" />
         <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
           {services.map((service, i) => (
             <BlurFade key={service.title} inView delay={0.1 * i} className="h-full">

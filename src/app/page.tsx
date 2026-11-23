@@ -1,5 +1,6 @@
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
 import { Hero } from "@/components/sections/hero";
 import { KeywordMarquee } from "@/components/sections/keyword-marquee";
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <KeywordMarquee />
         <Services />
+        <About />
         <Process />
         <Contact />
       </main>

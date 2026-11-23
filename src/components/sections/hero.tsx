@@ -56,10 +56,10 @@ export function Hero() {
             data-hero-title
             className="font-heading text-[2.6rem] leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl md:text-5xl lg:text-7xl"
           >
-            Trockenbau, Böden & Tapeten. <span className="text-brand">Sauber gemacht.</span>
+            Saubere Arbeit. <span className="text-brand">Faire Preise.</span>
           </h1>
           <p data-hero-fade className="max-w-md text-base text-stone-600 sm:text-lg">
-            Ihr Handwerker in {contact.area} für Trockenbau, Bodenverlegung und Raufasertapete. Direkt vom Fachmann, ohne Umwege.
+            Ihr Handwerksbetrieb in {contact.area} für Trockenbau, Bodenverlegung, Tapezierarbeiten und Renovierung. Persönlich betreut, direkt vom Fachmann.
           </p>
           <div
             data-hero-fade
