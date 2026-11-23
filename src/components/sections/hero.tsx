@@ -93,9 +93,6 @@ export function Hero() {
             sizes="(min-width: 768px) 45vw, 100vw"
             className="object-cover"
           />
-          <span className="absolute bottom-3 left-3 rounded-full bg-black/45 px-2.5 py-1 text-[11px] text-white backdrop-blur-sm">
-            Symbolbild (KI-generiert)
-          </span>
           <BorderBeam size={220} duration={10} colorFrom="var(--brand-bright)" colorTo="var(--brand-soft)" borderWidth={2} />
         </div>
       </Container>
