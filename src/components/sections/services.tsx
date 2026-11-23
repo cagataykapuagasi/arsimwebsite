@@ -17,7 +17,7 @@ function ServiceCard({ title, text, icon }: Service) {
       gradientTo="var(--brand-soft)"
     >
       <div className="relative z-40 flex h-full flex-col gap-4 p-6 lg:p-8">
-        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50">
+        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft/50">
           <Icon className="text-brand h-7 w-7" />
         </span>
         <h3 className="font-heading text-xl font-semibold">{title}</h3>
